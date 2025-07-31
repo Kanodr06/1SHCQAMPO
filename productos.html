@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - SHCQAMPO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #bef8d2;
+        }
+        .product-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #16a34a;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .btn-green {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        }
+        .btn-green:hover {
+            background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #bef8d2 0%, #a7f3d0 50%, #86efac 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body style="background-color: #bef8d2;">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="https://hatchcanvas.com/_/assets/ab_DiUi8iBJRKYIq1h9SUxfn/keys//S4OL6lgUIm9l-HpkDtPOn" alt="Shcqampo Logo" class="h-10 w-10 rounded-full">
+                    <span class="ml-2 text-xl font-bold text-gray-900">SHCQAMPO</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Inicio</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600 font-medium">¿Quiénes somos?</a>
+                    <a href="aqua4d.html" class="text-gray-700 hover:text-green-600 font-medium">Servicios</a>
+                    <a href="productos.html" class="text-green-600 font-medium border-b-2 border-green-600">Productos</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600 font-medium">Contáctanos</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <div class="flex space-x-2">
+                       <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+                        </a>
+                       <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section for Products -->
+    <section class="hero-bg py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-green-800 mb-4 text-shadow">
+                    Máquinas Agrícolas de <span class="text-green-600">Última Generación</span>
+                </h1>
+                <p class="text-xl text-green-700 mb-6 font-medium max-w-3xl mx-auto">
+                    Tecnología avanzada para maximizar tu productividad agrícola con el mejor rendimiento y eficiencia del mercado.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Products Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestros <span class="text-green-600">Productos</span></h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Descubre nuestra línea completa de máquinas agrícolas de última generación, diseñadas para optimizar tu producción y maximizar la eficiencia en el campo.
+                </p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Producto 1: Sistema de Riego Inteligente -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="LAVADORA POR CEPILLADO.PNG"
+                             alt="LAVADORA POR CEPILLADO" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">LAVADORA POR CEPILLADO</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Durante la limpieza, las frutas y verdura giran continuamente en todas las direcciones, la fruta se cepilla y se rocía simultáneamente. El efecto limpiador es bueno, para eliminar con eficacia suciedad y residuos de pesticida. Capacidad desde 100 kg/h hasta 3 Ton/h.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Eliminación eficiente de pesticidas</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Eliminación eficiente de pesticidas</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Alta capacidad de procesamiento</span>
+                        </div>
+                        <button onclick="solicitarCotizacion('Lavadora Por Cepillado')" 
+                                class="w-full btn-green text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Solicitar Cotización
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Tractor Compacto -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="LAVADORA DE TAMBOR.png" 
+                             alt="LAvadora de tambor" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">LAVADORA DE TAMBOR</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Es utilizada en la industria para realizar el lavado de múltiples productos como zanahorias, pepinos, cebollas, papa etc., Su tambor interno tiene una acción giratoria que consigue una limpieza exhaustiva, el flujo de producto a través del tambor se controla por medio de cuatro aspas impulsoras que en combinación con la velocidad de giro permite al industrial optimizar el lavado y la limpieza de todos los productos. Capacidad: de 100 Kg a 3 Ton/h
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Limpieza profunda continua</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Flujo controlado preciso</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Alta capacidad productiva</span>
+                        </div>
+                        <button onclick="solicitarCotizacion('LAVADORA DE TAMBOR')" 
+                                class="w-full btn-green text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Solicitar Cotización
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Pulverizador Autopropulsado -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="LAVADORA POR INMERSION.png" 
+                             alt="Lavadora por Inmersion" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">LAVADORA POR INMERSIÓN</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Equipo utilizado para pre-lavar frutas y hortalizas, removiendo la parte gruesa de las impurezas, por medio de burbujas que resultan de la agitación que se genera dentro del tanque por medio de sopladores que producen turbulencia.  Se manejan capacidades entre 100 Kg/h hasta 3 Ton/h
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Remoción de impurezas</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Agitación por burbujas</span>
+                            <span class="bg-purple-100 text-purple-80xt0 te-xs font-medium px-2.5 py-0.5 rounded">Prelavado eficiente</span>
+                        </div>
+                        <button onclick="solicitarCotizacion('LAVADORA POR INMERSION)" 
+                                class="w-full btn-green text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Solicitar Cotización
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 4: Cosechadora de Granos -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="DESPULPADORA 2TON.png" 
+                             alt="Despulpadora 2TON" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">DESPULPADORA 2TON/H</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Este equipo se utiliza para eliminar partículas como semillas y cáscaras, de diferentes tipos de fruta obteniendo así pulpa de alta calidad para preparar jugo, mermelada, néctar y compotas. Capacidad 2 Ton / h.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Alta capacidad continua</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"> Separación eficiente automática</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded"> Ideal para pulpas</span>
+                        </div>
+                        <button onclick="solicitarCotizacion('Despulpadora 2TON/H')" 
+                                class="w-full btn-green text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Solicitar Cotización
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 5: Sembradora de Precisión -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="PELADOR DE SABILA.png" 
+                             alt="Pelador de Sabila" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">PELADORA DE SÁBILA</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+Maquina utilizada para retirar la cascara de la hoja de sábila realizando la extracción de la pulpa o gel.                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Extracción limpia precisa</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Conserva el gel</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Ahorro de tiempo</span>
+                        </div>
+                        <button onclick="solicitarCotizacion('Peladora de Sabila')" 
+                                class="w-full btn-green text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Solicitar Cotización
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 6: Cultivadora Rotativa -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="TANQUE LAVADO.png" 
+                             alt="Tanque de Lavado" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">TANQUE LAVADO MANUAL</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                           Esta unidad es ideal para realizar la desinfección manual de frutas y hortalizas antes de ingresar a procesos posteriores como pelado, corte o empaque. Permite el uso controlado de soluciones desinfectantes (como hipoclorito, ácido peracético u ozono) en un entorno seguro y accesible para el operario, asegurando una limpieza profunda que reduce la carga microbiana y mejora la inocuidad del producto final.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Desinfección eficiente segura</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Reducción de patógenos</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Fácil operación manual</span>
+                        </div>
+                        <button onclick="solicitarCotizacion('Cultivadora Rotativa CR-250')" 
+                                class="w-full btn-green text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Solicitar Cotización
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12">
+                <div class="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-lg border-2 border-green-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">¿Necesitas una solución personalizada?</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Nuestro equipo de expertos puede ayudarte a encontrar la máquina perfecta para tus necesidades específicas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="contactarAsesor()" 
+                                class="btn-green text-white py-3 px-8 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Contactar Asesor
+                        </button>
+                        <button onclick="verCatalogo()" 
+                                class="bg-white border-2 border-green-600 text-green-600 py-3 px-8 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300">
+                            Ver Catálogo Completo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://hatchcanvas.com/_/assets/ab_DiUi8iBJRKYIq1h9SUxfn/keys//S4OL6lgUIm9l-HpkDtPOn" alt="Shcqampo Logo" class="h-8 w-8 rounded-full mr-2">
+                        <span class="text-xl font-bold text-green-400">SHCQAMPO</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Tecnología avanzada de tratamiento del agua y maquinaria agrícola de última generación.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-green-400 hover:text-green-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="text-green-400 hover:text-green-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-green-400 mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            SHC QAMPO, BOGOTA
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            info@shcqampo.com
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            +57 316 359 1537
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-green-400 mb-4">Enlaces Rápidos</h3>
+                    <div class="space-y-2">
+                        <a href="index.html" class="block text-gray-300 hover:text-green-400 transition-colors">Inicio</a>
+                        <a href="#" class="block text-gray-300 hover:text-green-400 transition-colors">Quiénes Somos</a>
+                        <a href="aqua4d.html" class="block text-gray-300 hover:text-green-400 transition-colors">Servicios</a>
+                        <a href="productos.html" class="block text-gray-300 hover:text-green-400 transition-colors">Productos</a>
+                        <a href="#" class="block text-gray-300 hover:text-green-400 transition-colors">Contacto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 SHCQAMPO. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function solicitarCotizacion(producto) {
+            // Aquí puedes agregar la lógica para solicitar cotización
+            alert(`Solicitar cotización para: ${producto}\n\nRedirigiendo al formulario de contacto...`);
+            // Ejemplo: window.location.href = 'contacto.html?producto=' + encodeURIComponent(producto);
+        }
+
+        function contactarAsesor() {
+            alert('Contactando con nuestro asesor especializado...');
+            // Aquí puedes agregar la lógica para contactar al asesor
+        }
+
+        function verCatalogo() {
+            alert('Descargando catálogo completo...');
+            // Aquí puedes agregar la lógica para mostrar/descargar el catálogo
+        }
+
+        // Animación al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animación a las tarjetas de productos
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
