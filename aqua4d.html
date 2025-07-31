@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alianza AQUA4D - SHCQAMPO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #bef8d2;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #bef8d2 0%, #a7f3d0 50%, #86efac 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-green {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        }
+        .btn-green:hover {
+            background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f3f4f6;
+        }
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #e5e7eb, #d1d5db);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .video-placeholder:hover {
+            background: linear-gradient(45deg, #d1d5db, #9ca3af);
+        }
+        .step-number {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 16px;
+        }
+        .process-arrow {
+            color: #16a34a;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+        }
+        @media (max-width: 768px) {
+            .process-arrow {
+                transform: rotate(90deg);
+            }
+        }
+        .partnership-bg {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+        }
+    </style>
+</head>
+<body style="background-color: #bef8d2;">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="https://hatchcanvas.com/_/assets/ab_DiUi8iBJRKYIq1h9SUxfn/keys//S4OL6lgUIm9l-HpkDtPOn" alt="Shcqampo Logo" class="h-10 w-10 rounded-full">
+                    <span class="ml-2 text-xl font-bold text-gray-900">SHCQAMPO</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Inicio</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600 font-medium">¿Quiénes somos?</a>
+                    <a href="aqua4d.html" class="text-green-600 font-medium border-b-2 border-green-600">Servicios</a>
+                    <a href="productos.html" class="text-gray-700 hover:text-green-600 font-medium">Productos</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600 font-medium">Contáctanos</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <div class="flex space-x-2">
+                       <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+                        </a>
+                       <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-6xl font-bold text-green-800 mb-6 text-shadow">
+                    SHCQAMPO <span class="text-green-600">×</span> AQUA4D
+                </h1>
+                <h2 class="text-2xl lg:text-3xl font-semibold text-green-700 mb-6">
+                    Alianza Estratégica para el Futuro del Riego
+                </h2>
+                <p class="text-xl text-green-700 mb-8 font-medium max-w-4xl mx-auto leading-relaxed">
+                    Nos enorgullece ser el distribuidor autorizado de la revolucionaria tecnología AQUA4D en Colombia. 
+                    Juntos transformamos la agricultura con sistemas de riego inteligente que ahorran hasta un 70% de agua.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('como-funciona')" class="btn-green text-white py-4 px-8 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                        Descubre Cómo Funciona
+                    </button>
+                    <button onclick="scrollToSection('testimonios')" class="bg-white border-2 border-green-600 text-green-600 py-4 px-8 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300">
+                        Ver Testimonios
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="partnership-bg py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                        Una Alianza <span class="text-green-600">Poderosa</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        <strong>SHCQAMPO</strong> se ha asociado estratégicamente con <strong>AQUA4D</strong>, empresa suiza reconocida globalmente por su tecnología electromagnética avanzada para el tratamiento del agua. Gracias a esta alianza, hoy ponemos al alcance del sector agrícola colombiano un sistema innovador que optimiza el riego, mejora la calidad del agua y aumenta la eficiencia del cultivo sin químicos ni mantenimiento.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Tecnología Suiza de Vanguardia</h3>
+                                <p class="text-gray-600">Sistemas desarrollados en Suiza con más de 20 años de investigación</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Soporte Local Especializado</h3>
+                                <p class="text-gray-600">Instalación, mantenimiento y soporte técnico en Colombia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Garantía de Resultados</h3>
+                                <p class="text-gray-600">Respaldamos la eficacia de nuestros sistemas con garantías sólidas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="logoaquaazul.jpg" 
+                         alt="Alianza SHCQAMPO y AQUA4D" 
+                         class="w-full max-w-md mx-auto rounded-2xl shadow-lg">
+                    <div class="mt-6 flex justify-center space-x-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">20+</div>
+                            <div class="text-sm text-gray-600">Años de experiencia AQUA4D</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">5000+</div>
+                            <div class="text-sm text-gray-600">Instalaciones mundiales</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">70%</div>
+                            <div class="text-sm text-gray-600">Ahorro de agua promedio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="como-funciona" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">¿Cómo Funciona <span class="text-green-600">AQUA4D</span>?</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    La tecnología electromagnética de AQUA4D actúa sobre el agua de riego para alterar su comportamiento físico sin añadir ningún químico, obteniendo céspedes más verdes, sanos y resistentes con hasta un 70 % de ahorro de agua. Se basa en 20 años de investigación y se compone de tres etapas clave:
+                </p>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="step-number">1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Tratamiento Electromagnético</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        El agua pasa por nuestro sistema que aplica campos electromagnéticos específicos, modificando la estructura molecular del agua para mejorar su capacidad de hidratación.
+                    </p>
+                </div>
+                
+                <div class="process-arrow hidden md:flex">→</div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="step-number">2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mejor Absorción</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        El agua tratada penetra más eficientemente en el suelo y las raíces, permitiendo que las plantas absorban más nutrientes con menos agua.
+                    </p>
+                </div>
+                
+                <div class="process-arrow hidden md:flex">→</div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="step-number">3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Resultados Superiores</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Obtienes cultivos más saludables, mayor rendimiento, reducción del uso de fertilizantes y hasta 70% menos consumo de agua.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Technical Explanation -->
+            <div class="bg-green-50 rounded-2xl p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Ciencia Detrás de la Tecnología</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+                                <p class="text-gray-700"><strong>Sin químicos:</strong> El proceso es 100% físico, no altera la composición química del agua</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+                                <p class="text-gray-700"><strong>Efecto duradero:</strong> Los beneficios permanecen en el agua por varios días</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+                                <p class="text-gray-700"><strong>Bajo mantenimiento:</strong> Sistema robusto que requiere mínimo mantenimiento</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+                                <p class="text-gray-700"><strong>Instalación simple:</strong> Se integra fácilmente a sistemas de riego existentes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                         <iframe 
+                        class="w-96 h-72 rounded-lg shadow-lg"
+                        src="https://www.youtube.com/embed/hZqqsXthuEY?autoplay=1&mute=1&loop=1&playlist=hZqqsXthuEY&controls=1&showinfo=0&rel=0&modestbranding=1"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16" style="background-color: #bef8d2;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-green-800 mb-4">Beneficios Comprobados</h2>
+                <p class="text-xl text-green-700 max-w-3xl mx-auto">
+                    Miles de agricultores en todo el mundo han experimentado mejoras significativas con AQUA4D
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ahorro de Agua</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-2">70%</p>
+                    <p class="text-gray-600">Reducción promedio en el consumo de agua de riego</p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Mayor Rendimiento</h3>
+                    <p class="text-3xl font-bold text-green-600 mb-2">30%</p>
+                    <p class="text-gray-600">Incremento promedio en la productividad de cultivos</p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Menos Fertilizantes</h3>
+                    <p class="text-3xl font-bold text-purple-600 mb-2">50%</p>
+                    <p class="text-gray-600">Reducción en el uso de fertilizantes químicos</p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">ROI Rápido</h3>
+                    <p class="text-3xl font-bold text-orange-600 mb-2">2-3</p>
+                    <p class="text-gray-600">Años promedio de retorno de inversión</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Testimonios de <span class="text-green-600">Nuestros Clientes</span></h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Escucha las experiencias reales de agricultores que han transformado sus operaciones con AQUA4D
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="video-container">
+                        <iframe width="100%" height="100%" 
+                                src="https://www.youtube.com/embed/2JCPoVBuYrA" 
+                                frameborder="0" allowfullscreen 
+                                style="position: absolute; top: 0; left: 0; border-radius: 12px;">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Natanael</h3>
+                        <p class="text-green-600 font-medium mb-3">Top Planet</p>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">5.0 estrellas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="video-container">
+                        <iframe width="100%" height="100%" 
+                                src="https://www.youtube.com/embed/iMaC1QCeHgI" 
+                                frameborder="0" allowfullscreen 
+                                style="position: absolute; top: 0; left: 0; border-radius: 12px;">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Armando Malul</h3>
+                        <p class="text-green-600 font-medium mb-3">Cultivadora de mangos - Brazil</p>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">5.0 estrellas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="video-container">
+                        <iframe width="100%" height="100%" 
+                                src="https://www.youtube.com/embed/cci2LrN2kLQ" 
+                                frameborder="0" allowfullscreen 
+                                style="position: absolute; top: 0; left: 0; border-radius: 12px;">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Wouter Uitentuis</h3>
+                        <p class="text-green-600 font-medium mb-3">Jefe de cesped - AZ ALKMAAR</p>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">5.0 estrellas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional testimonials row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Testimonio 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="video-container">
+                        <iframe width="100%" height="100%" 
+                                src="https://www.youtube.com/embed/NVxvpkxZgBk" 
+                                frameborder="0" allowfullscreen 
+                                style="position: absolute; top: 0; left: 0; border-radius: 12px;">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Los efectos de AQUA4D</h3>
+                        <p class="text-green-600 font-medium mb-3">
+Los efectos de AQUA4D® en los árboles de frutos secos</p>
+                    
+                    </div>
+                </div>
+
+                <!-- Testimonio 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="video-container">
+                        <iframe width="100%" height="100%" 
+                                src="https://www.youtube.com/embed/iywbgG-hMSk" 
+                                frameborder="0" allowfullscreen 
+                                style="position: absolute; top: 0; left: 0; border-radius: 12px;">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Aguas antofagasta</h3>
+                        <p class="text-green-600 font-medium mb-3">Eficiencia hidrica en el norte de chile</p>
+                     
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="py-16" style="background-color: #bef8d2;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-green-800 mb-4">Nuestros <span class="text-green-600">Servicios</span></h2>
+                <p class="text-xl text-green-700 max-w-3xl mx-auto">
+                    SHCQAMPO ofrece servicios integrales para garantizar el éxito de tu implementación AQUA4D
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Consultoría Técnica</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Evaluamos tus necesidades específicas y diseñamos la solución AQUA4D perfecta para tu operación agrícola.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Instalación Profesional</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Nuestro equipo técnico certificado instala y configura tu sistema AQUA4D con precisión y eficiencia.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Soporte Continuo</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Brindamos mantenimiento preventivo, soporte técnico 24/7 y actualizaciones para optimizar tu sistema.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Capacitación</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Entrenamos a tu equipo para que aprovechen al máximo las capacidades del sistema AQUA4D.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Optimización del Riego</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                      Analizamos el comportamiento del agua en tu sistema y ajustamos parámetros clave para mejorar la eficiencia hídrica y el rendimiento del cultivo.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Monitoreo y Análisis</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Seguimos el rendimiento de tu sistema y proporcionamos informes detallados para optimizar resultados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                ¿Listo para Transformar tu <span class="text-green-600">campo</span>?
+            </h2>
+            <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                Únete a los miles de agricultores que ya están ahorrando agua, aumentando rendimientos y mejorando sus cultivos con la tecnología AQUA4D de SHCQAMPO.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="contactarEspecialista()" class="btn-green text-white py-4 px-8 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                    Solicitar Evaluación Gratuita
+                </button>
+                
+            </div>
+            <p class="text-sm text-gray-500 mt-4">
+                * Evaluación técnica sin compromiso • Consulta gratuita •
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://hatchcanvas.com/_/assets/ab_DiUi8iBJRKYIq1h9SUxfn/keys//S4OL6lgUIm9l-HpkDtPOn" alt="Shcqampo Logo" class="h-8 w-8 rounded-full mr-2">
+                        <span class="text-xl font-bold text-green-400">SHCQAMPO</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Distribuidor autorizado de AQUA4D en Colombia. Transformando la agricultura con tecnología electromagnética.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-green-400 hover:text-green-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="text-green-400 hover:text-green-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="text-green-400 hover:text-green-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.120.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.162-1.499-.699-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-green-400 mb-4">AQUA4D</h3>
+                    <div class="space-y-2">
+                        <a href="aqua4d.html" class="block text-gray-300 hover:text-green-400 transition-colors">¿Cómo Funciona?</a>
+                        <a href="aqua4d.html" class="block text-gray-300 hover:text-green-400 transition-colors">Beneficios</a>
+                        <a href="aqua4d.html" class="block text-gray-300 hover:text-green-400 transition-colors">Casos de Éxito</a>
+                        <a href="#" class="block text-gray-300 hover:text-green-400 transition-colors">Solicitar Demo</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-green-400 mb-4">Servicios</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="block text-gray-300 hover:text-green-400 transition-colors">Exportacion</a>
+                        <a href="productos.html" class="block text-gray-300 hover:text-green-400 transition-colors">Maquinaria</a>
+                        <a href="#" class="block text-gray-300 hover:text-green-400 transition-colors">Mantenimiento</a>
+                        <a href="#" class="block text-gray-300 hover:text-green-400 transition-colors">Soporte Técnico</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-green-400 mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            SHC QAMPO, BOGOTÁ
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            aqua4d@shcqampo.com
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            +57 316 359 1537
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 SHCQAMPO - Distribuidor Autorizado AQUA4D Colombia. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function playVideo(videoNumber) {
+            alert(`Reproduciendo testimonio en video ${videoNumber}\n\nEn una implementación real, aquí se abriría el reproductor de video correspondiente.`);
+            // En una implementación real, aquí se abriría el modal con el video
+        }
+
+        function contactarEspecialista() {
+            alert('Conectando con nuestro especialista en AQUA4D...\n\nTe contactaremos en las próximas 24 horas para programar tu evaluación gratuita.');
+        }
+
+        function descargarBrochure() {
+            alert('Descargando brochure AQUA4D...\n\nEl documento se descargará automáticamente con toda la información técnica.');
+        }
+
+        // Animaciones al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animación a elementos
+        document.querySelectorAll('.feature-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
