@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quiénes Somos? - SHCQAMPO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #bef8d2;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #bef8d2 0%, #a7f3d0 50%, #86efac 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-green {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        }
+        .btn-green:hover {
+            background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: #16a34a;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #16a34a;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 6px;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% - 1rem);
+            background: linear-gradient(to bottom, #16a34a, #bef8d2);
+        }
+        .stats-bg {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+        }
+        .mission-vision-bg {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        .world-map {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M20,25 Q25,15 30,25 T40,25 M60,25 Q65,15 70,25 T80,25' stroke='%2316a34a' stroke-width='0.5' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 100px 50px;
+        }
+    </style>
+</head>
+<body style="background-color: #bef8d2;">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="https://hatchcanvas.com/_/assets/ab_DiUi8iBJRKYIq1h9SUxfn/keys//S4OL6lgUIm9l-HpkDtPOn" alt="Shcqampo Logo" class="h-10 w-10 rounded-full">
+                    <span class="ml-2 text-xl font-bold text-gray-900">SHCQAMPO</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Inicio</a>
+                    <a href="quienes.html" class="text-green-600 font-medium border-b-2 border-green-600">¿Quiénes somos?</a>
+                    <a href="aqua4d.html" class="text-gray-700 hover:text-green-600 font-medium">Servicios</a>
+                    <a href="productos.html" class="text-gray-700 hover:text-green-600 font-medium">Productos</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600 font-medium">Contáctanos</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <div class="flex space-x-2">
+                       <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+                        </a>
+                       <a href="#" class="text-green-600 hover:text-green-700">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-6xl font-bold text-green-800 mb-6 text-shadow">
+                    ¿Quiénes <span class="text-green-600">Somos?</span>
+                </h1>
+                <h2 class="text-2xl lg:text-3xl font-semibold text-green-700 mb-6">
+                    Expertos en Riego de Alta Eficiencia
+                </h2>
+                <p class="text-xl text-green-700 mb-8 font-medium max-w-4xl mx-auto leading-relaxed">
+                    Somos una empresa colombiana especializada en tecnología agrícola avanzada, comprometida con transformar la agricultura a través de soluciones innovadoras y sustentables.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                        Nuestra <span class="text-green-600">Historia</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        <strong>SHCQAMPO</strong> nació con el propósito de llevar tecnología agrícola de última generación a todo el país. Aunque somos una empresa joven, estamos respaldados por alianzas estratégicas sólidas como nuestra representación oficial de <strong>AQUA4D</strong> en Colombia.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Nos enfocamos en implementar soluciones sostenibles e innovadoras que ayuden a optimizar el uso del agua, mejorar la eficiencia del riego y aumentar la productividad del campo colombiano.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Además, contamos con una línea en crecimiento de <STRONG>maquinaria agrícola</STRONG> propia, diseñada para responder a las necesidades reales del agricultor moderno, ofreciendo equipos funcionales, accesibles y adaptados al clima y condiciones locales.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                         <strong>Apenas comenzamos, pero nuestro compromiso con el agro es firme y a largo plazo.</strong>
+                    </p>
+                </div>
+                <div class="text-center">
+                    <img src="keys/company-team?prompt=Professional%20agricultural%20company%20team%20in%20modern%20office%20and%20field%20setting,%20Colombian%20agricultural%20business,%20diverse%20team,%20modern%20technology" 
+                         alt="Equipo SHCQAMPO" 
+                         class="w-full max-w-md mx-auto rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Strengths Section -->
+    <section class="py-16" style="background-color: #bef8d2;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-green-800 mb-4">Nuestras <span class="text-green-600">Fortalezas</span></h2>
+                <p class="text-xl text-green-700 max-w-3xl mx-auto">
+                    Lo que nos hace únicos en el mercado agrícola colombiano e internacional
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Alianza Estratégica AQUA4D</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Distribuidor autorizado de la tecnología electromagnética suiza más avanzada para tratamiento de agua de riego.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Desarrollo de Maquinaria</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Diseñamos y fabricamos equipos agrícolas estándar y soluciones a medida para necesidades específicas.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Soluciones Personalizadas</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Desarrollamos equipos agrícolas a medida según las necesidades específicas de cada cliente y tipo de cultivo.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Innovación Continua</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Investigamos y desarrollamos constantemente nuevas soluciones para optimizar la productividad agrícola.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sustentabilidad</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Promovemos prácticas agrícolas sostenibles que preservan el medio ambiente y optimizan recursos.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Soporte Integral</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Ofrecemos acompañamiento completo desde la consultoría hasta el mantenimiento y soporte técnico.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Technology Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestras <span class="text-green-600">Tecnologías</span></h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Combinamos la innovación suiza de AQUA4D con el desarrollo nacional de maquinaria agrícola
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Tecnología AQUA4D</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">💧 Tratamiento Electromagnético del Agua</h4>
+                                <p class="text-gray-600">Tecnología suiza que optimiza las propiedades del agua de riego sin usar químicos, mejorando la absorción de nutrientes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">⚡ Maquinaria Propia</h4>
+                                <p class="text-gray-600">Desarrollo y fabricación de equipos agrícolas diseñados específicamente para las condiciones de cultivo colombianas.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 rounded-lg p-6 mt-8">
+                            <h4 class="font-semibold text-green-800 mb-3">Beneficios de Nuestras Tecnologías:</h4>
+                            <ul class="space-y-2 text-green-700">
+                                <li>• Ahorro de agua hasta 70% con AQUA4D</li>
+                                <li>• Aumento de productividad hasta 30%</li>
+                                <li>• Maquinaria adaptada al clima tropical</li>
+                                <li>• Soporte técnico especializado en Colombia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="keys/technology-overview?prompt=Agricultural%20technology%20overview%20showing%20AQUA4D%20water%20treatment%20system%20and%20modern%20farming%20machinery,%20Colombian%20agriculture,%20innovation" 
+                         alt="Tecnologías SHCQAMPO" 
+                         class="w-full max-w-md mx-auto rounded-2xl shadow-lg">
+                    <div class="mt-6 flex justify-center space-x-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">2</div>
+                            <div class="text-sm text-gray-600">Líneas tecnológicas</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">20+</div>
+                            <div class="text-sm text-gray-600">Años experiencia AQUA4D</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">100%</div>
+                            <div class="text-sm text-gray-600">Adaptado a Colombia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section class="mission-vision-bg py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Misión y <span class="text-green-600">Visión</span></h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Misión -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Nuestra Misión</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed text-center">
+                        Impulsar la transformación del sector agrícola mediante la implementación de tecnologías innovadoras, sostenibles y accesibles, que optimicen el uso del agua, mejoren la productividad y generen valor real para los agricultores.
+                    </p>
+                    <div class="mt-6 text-center">
+                        <div class="inline-flex items-center px-4 py-2 bg-green-100 rounded-full">
+                            <span class="text-green-800 font-medium">🌱 Innovación • Sustentabilidad • Calidad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visión -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Nuestra Visión</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed text-center">
+                        Ser reconocidos en Latinoamérica como referentes en soluciones tecnológicas para el agro, liderando la evolución hacia una agricultura más eficiente, responsable con el medio ambiente y preparada para el futuro.
+                    </p>
+                    <div class="mt-6 text-center">
+                        <div class="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full">
+                            <span class="text-blue-800 font-medium">🚀 Liderazgo • Excelencia • Futuro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="mt-12">
+                <h3 class="text-3xl font-bold text-gray-900 text-center mb-8">Nuestros <span class="text-green-600">Valores</span></h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                        <div class="text-4xl mb-3">🌿</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Sustentabilidad</h4>
+                        <p class="text-sm text-gray-600">Comprometidos con el cuidado del medio ambiente</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                        <div class="text-4xl mb-3">⚡</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Innovación</h4>
+                        <p class="text-sm text-gray-600">Buscamos constantemente nuevas soluciones</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                        <div class="text-4xl mb-3">🤝</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Integridad</h4>
+                        <p class="text-sm text-gray-600">Actuamos con honestidad y transparencia</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                        <div class="text-4xl mb-3">🎯</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Excelencia</h4>
+                        <p class="text-sm text-gray-600">Superamos las expectativas de nuestros clientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                ¿Listo para ser parte de la <span class="text-green-600">Revolución Agrícola</span>?
+            </h2>
+            <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                Únete a cientos de agricultores que ya han transformado sus operaciones con nuestras soluciones tecnológicas. Descubre cómo podemos ayudarte a optimizar tu producción.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="contactarAhora()" class="btn-green text-white py-4 px-8 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                    Contactar Ahora
+                </button>
+                <button onclick="conocerServicios()" class="bg-white border-2 border-green-600 text-green-600 py-4 px-8 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300">
+                    Conocer Servicios
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://hatchcanvas.com/_/assets/ab_DiUi8iBJRKYIq1h9SUxfn/keys//S4OL6lgUIm9l-HpkDtPOn" alt="Shcqampo Logo" class="h-8 w-8 rounded-full mr-2">
+                        <span class="text-xl font-bold text-green-400">SHCQAMPO</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Innovación y tecnología al servicio del agro colombiano e internacional.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-green-400 hover:text-green-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="text-green-400 hover:text-green-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="text-green-400 hover:text-green-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.120.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.162-1.499-.699-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-green-400 mb-4">Empresa</h3>
+                    <div class="space-y-2">
+                        <a href="quienes.html" class="block text-gray-300 hover:text-green-400 transition-colors">Historia</a>
+                        <a href="quienes.html" class="block text-gray-300 hover:text-green-400 transition-colors">Misión y Visión</a>
+                        <a href="quienes.html" class="block text-gray-300 hover:text-green-400 transition-colors">Valores</a>
+                        <a href="quienes.html" class="block text-gray-300 hover:text-green-400 transition-colors">Equipo</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-green-400 mb-4">Servicios</h3>
+                    <div class="space-y-2">
+                        <a href="aqua4d.html" class="block text-gray-300 hover:text-green-400 transition-colors">AQUA4D</a>
+                        <a href="productos.html" class="block text-gray-300 hover:text-green-400 transition-colors">Maquinaria Agrícola</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-green-400 mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            SHC QAMPO, BOGOTÁ
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            info@shcqampo.com
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            +57 316 359 1537
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 SHCQAMPO - Innovación y Tecnología al Servicio del Agro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function contactarAhora() {
+            alert('Conectando con nuestro equipo...\n\nTe contactaremos en las próximas 24 horas.');
+        }
+
+        function conocerServicios() {
+            alert('Redirigiendo a nuestros servicios...');
+            // Aquí puedes agregar la lógica para ir a la página de servicios
+        }
+
+        // Animaciones al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animación a elementos
+        document.querySelectorAll('.feature-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+
+        // Animación para estadísticas
+        const statsElements = document.querySelectorAll('.stats-bg .text-4xl');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalValue = target.textContent;
+                    const numericValue = parseInt(finalValue.replace(/\D/g, ''));
+                    const suffix = finalValue.replace(/\d/g, '');
+                    
+                    let current = 0;
+                    const increment = numericValue / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= numericValue) {
+                            target.textContent = finalValue;
+                            clearInterval(timer);
+                        } else {
+                            target.textContent = Math.floor(current) + suffix;
+                        }
+                    }, 30);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statsElements.forEach(el => statsObserver.observe(el));
+    </script>
+</body>
+</html>
