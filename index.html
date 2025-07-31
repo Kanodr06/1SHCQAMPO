@@ -16,6 +16,13 @@
                 <div class="flex items-center">
                     <img src="https://hatchcanvas.com/_/assets/ab_DiUi8iBJRKYIq1h9SUxfn/keys//S4OL6lgUIm9l-HpkDtPOn" alt="Shcqampo Logo" class="h-10 w-10 rounded-full">
                     <span class="ml-2 text-xl font-bold text-gray-900">SHCQAMPO</span>
+                      <!-- Botón menú móvil -->
+<button id="menuToggle" class="md:hidden ml-4 text-gray-700 focus:outline-none">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="quienes.html" class="text-gray-700 hover:text-green-600 font-medium">¿Quiénes somos?</a>
@@ -23,6 +30,13 @@
                     <a href="productos.html" class="text-gray-700 hover:text-green-600 font-medium">Productos</a>
                     <a href="mantenimiento.html" class="text-gray-700 hover:text-green-600 font-medium">Contáctanos</a>
                 </nav>
+                <!-- Menú móvil desplegable -->
+<div id="mobileMenu" class="md:hidden hidden flex flex-col space-y-2 mt-4">
+  <a href="quienes.html" class="text-gray-700 hover:text-green-600 font-medium">¿Quiénes somos?</a>
+  <a href="aqua4d.html" class="text-gray-700 hover:text-green-600 font-medium">Servicios</a>
+  <a href="productos.html" class="text-gray-700 hover:text-green-600 font-medium">Productos</a>
+  <a href="mantenimiento.html" class="text-gray-700 hover:text-green-600 font-medium">Contáctanos</a>
+</div>
                 <div class="flex items-center space-x-4">
                     <div class="flex space-x-2">
                        <a href="mantenimiento.html" class="text-green-600 hover:text-green-700">
@@ -475,5 +489,13 @@ Riego con propósito, tecnología con impacto.
         </div>
     </footer>
     <script src="https://hatchcanvas.com/_/assets/ab_DiUi8iBJRKYIq1h9SUxfn/keys//script.js"></script>
+    <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 </body>
 </html>
